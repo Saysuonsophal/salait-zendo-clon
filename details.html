@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <style>
+    .img-thumbnail {
+      width: 100%;
+      height: auto;
+      border: none;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+    .main-product {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      object-position: top;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+    .product-color {
+      width: 18%;
+      border: 2px solid black;
+      margin-top: 8px;
+    }
+    .btn1 {
+      position: sticky;
+      top: 20px;
+      bottom: 0;
+      margin: 0;
+      padding: 0;
+    }
+    .button {
+      background-color: #f5f5f5;
+      font-size: 17px;
+      color: black;
+      width: 80px;
+      max-width: 80px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 4px;
+      margin-bottom: 5px;
+    }
+    .button:hover {
+      background-color: #f5f5f5;
+    }
+    .button:focus {
+      border: 1px solid black;
+    }
+    .button-minus {
+      width: 60px;
+      height: 40px;
+      background-color: #f5f5f5;
+      color: black;
+    }
+    .button-minus:hover {
+      background-color: #f5f5f5;
+      border: none;
+    }
+    .add-cart {
+      width: 83%;
+
+      padding: 10px;
+      font-size: 17px;
+    }
+    .faverite {
+      width: 15%;
+      background-color: #dfdfdf;
+      font-size: 20px;
+      padding: 8px;
+    }
+
+    @media (max-width: 576px) {
+      .img-thumbnail {
+        width: 94%;
+        margin-bottom: 5px;
+        margin-left: 6px;
+      }
+      .col-10 {
+        padding-left: 10px;
+        padding-right: 12px;
+      }
+      .product-color {
+        width: 25%;
+      }
+    }
+  </style>
+  <body>
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary mt-0 mb-3 pt-0">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://zandokh.com/images/ZANDO-NEW-LOGO-2025.png"
+            alt="Bootstrap"
+            width="150"
+            height="30"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Boys</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Girls Cloths
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Shirts</a></li>
+                <li><a class="dropdown-item" href="#">T-Shirts</a></li>
+                <li><a class="dropdown-item" href="#">Jetkits</a></li>
+                <li><a class="dropdown-item" href="#">Dresses</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Shoing all cloths</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button
+              class="btn btn-outline-success"
+              type="submit"
+              style="width: 250px; border: none; color: black"
+            >
+              Login / Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- Product Details -->
+    <div class="container">
+      <div class="row">
+        <!-- image thumbnail -->
+        <div class="col-lg-1 col-md-1 col-sm-2 col-2 p-0">
+          <div class="btn1">
+            <img
+              src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8972.jpg"
+              class="img-thumbnail"
+            />
+            <img
+              src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8974.jpg"
+              class="img-thumbnail"
+            />
+            <img
+              src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8971.jpg"
+              class="img-thumbnail"
+            />
+            <img
+              src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8966.jpg"
+              class="img-thumbnail"
+            />
+          </div>
+        </div>
+        <!-- main Image -->
+        <div class="col-lg-5 col-md-5 col-sm-10 col-10">
+          <div class="btn1">
+            <img
+              src="https://zandokh.com/image/catalog/banner/2025/ZANDO/Category%20lifestyle,%20sportlife,%20smartcasual/Oct/Smart%20Casual-1.jpg"
+              class="main-product"
+            />
+          </div>
+        </div>
+        <!-- Product information details -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+          <h5 class="card-title text-danger fs-3 py-1 fw-bold">
+            US $15.96
+            <span class="text-body-tertiary text-decoration-line-through"
+              >US $20.96</span
+            >
+          </h5>
+          <p class="card-text fs-5 fw-lightd py-1">Straight Leg Trouser</p>
+          <p class="card-text fs-6 fw-bold pt-2 m-0">1 Colors available</p>
+          <img
+            src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8972.jpg"
+            class="product-color"
+          />
+          <p class="card-text fw-lightd ms-3">Black</p>
+          <!-- <h3>Description</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, totam
+            expedita officiis iste autem vero quo! Accusantium totam laudantium
+            architecto quod suscipit possimus, repellat repellendus a officiis
+            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
+            provident necessitatibus animi, laboriosam cum. Nobis doloribus
+            libero molestias sapiente aut nisi fugit rerum eaque ullam
+            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
+            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
+            natus consequuntur, est sunt numquam voluptate suscipit non expedita
+            ex libero. Natus maiores cumque quaerat, vitae rerum velit
+            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
+            accusantium sunt tenetur delectus pariatur suscipit! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ab, totam expedita
+            officiis iste autem vero quo! Accusantium totam laudantium
+            architecto quod suscipit possimus, repellat repellendus a officiis
+            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
+            provident necessitatibus animi, laboriosam cum. Nobis doloribus
+            libero molestias sapiente aut nisi fugit rerum eaque ullam
+            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
+            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
+            natus consequuntur, est sunt numquam voluptate suscipit non expedita
+            ex libero. Natus maiores cumque quaerat, vitae rerum velit
+            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
+            accusantium sunt tenetur delectus pariatur suscipit! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ab, totam expedita
+            officiis iste autem vero quo! Accusantium totam laudantium
+            architecto quod suscipit possimus, repellat repellendus a officiis
+            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
+            provident necessitatibus animi, laboriosam cum. Nobis doloribus
+            libero molestias sapiente aut nisi fugit rerum eaque ullam
+            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
+            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
+            natus consequuntur, est sunt numquam voluptate suscipit non expedita
+            ex libero. Natus maiores cumque quaerat, vitae rerum velit
+            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
+            accusantium sunt tenetur delectus pariatur suscipit! Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Ab, totam expedita
+            officiis iste autem vero quo! Accusantium totam laudantium
+            architecto quod suscipit possimus, repellat repellendus a officiis
+            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
+            provident necessitatibus animi, laboriosam cum. Nobis doloribus
+            libero molestias sapiente aut nisi fugit rerum eaque ullam
+            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
+            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
+            natus consequuntur, est sunt numquam voluptate suscipit non expedita
+            ex libero. Natus maiores cumque quaerat, vitae rerum velit
+            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
+            accusantium sunt tenetur delectus pariatur suscipit!
+          </p> -->
+          <p class="card-text fs-5 fw-bold pt-2 m-0 pb-1">Size</p>
+
+          <button type="button" class="btn btn-secondar button">S</button>
+          <button type="button" class="btn btn-secondar button">M</button>
+          <button type="button" class="btn btn-secondar button">L</button>
+          <button type="button" class="btn btn-secondar button">XL</button>
+          <p class="card-text fs-5 fw-bold pt-4 m-0 pb-1">Quantity</p>
+          <button type="button" class="btn btn-secondar button-minus">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-secondar button-minus">1</button>
+          <button type="button" class="btn btn-secondar button-minus">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+
+          <button
+            type="button"
+            class="btn btn-dark mt-4 add-cart"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Add to Cart
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Your information and Shipping Address
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row mb-2">
+                    <div class="col-6">
+                      <label for="inputEmail4" class="form-label"
+                        >First Name</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputEmail4"
+                        placeholder="Your First Name"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label for="inputEmail4" class="form-label"
+                        >Lastname</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputEmail4"
+                        placeholder="Your Last Name"
+                      />
+                    </div>
+                    <div class="col-6">
+                      <label for="exampleFormControlInput1" class="form-label"
+                        >Your Email</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleFormControlInput1"
+                        placeholder="name@example.com"
+                      />
+                    </div>
+
+                    <div class="col-6">
+                      <label for="inputEmail4" class="form-label"
+                        >Phone Number</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputEmail4"
+                        placeholder="0XX-XXX-XXX"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label
+                        for="inputAddress"
+                        class="form-label"
+                        style="width: 100%"
+                        >Delivery Method</label
+                      >
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio1"
+                          value="option1"
+                        />
+                        <label class="form-check-label" for="inlineRadio1"
+                          >Virak Buntham</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2"
+                          >Grab Express</label
+                        >
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio3"
+                          value="option3"
+                        />
+                        <label class="form-check-label" for="inlineRadio3"
+                          >ZANDO Bikers</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="inputAddress" class="form-label"
+                        >Address</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="inputAddress"
+                        placeholder="1234 Main St"
+                      />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputState" class="form-label">Country</label>
+                      <select id="inputState" class="form-select">
+                        <option selected>Selection</option>
+                        <option value="1">Cambodia</option>
+                        <option value="2">India</option>
+                        <option value="3">singapore</option>
+                        <option value="4">Vietname</option>
+                        <option value="5">United States</option>
+                        <option value="6">Malaysia</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputCity" class="form-label">City</label>
+                      <input type="text" class="form-control" id="inputCity" />
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputZip" class="form-label"
+                        >Postal Code</label
+                      >
+                      <input type="text" class="form-control" id="inputZip" />
+                    </div>
+                    <div class="col-12">
+                      <label
+                        for="inputAddress"
+                        class="form-label"
+                        style="width: 100%"
+                        >Payment</label
+                      >
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radioDefault"
+                          id="radioDefault1"
+                        />
+                        <label class="form-check-label" for="radioDefault1">
+                          ABA PAY
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radioDefault"
+                          id="radioDefault2"
+                          checked
+                        />
+                        <label class="form-check-label" for="radioDefault2">
+                          Credit/Debit Card
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radioDefault"
+                          id="radioDefault2"
+                          checked
+                        />
+                        <label class="form-check-label" for="radioDefault2">
+                          ACLEDA PAY
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="radioDefault"
+                          id="radioDefault2"
+                          checked
+                        />
+                        <label class="form-check-label" for="radioDefault2">
+                          CHIP MONG BANK
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">
+                    Complete Order
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="btn btn-secondar mt-4 faverite">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+          <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                >
+                  General Info
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  <strong>When are new items available?</strong><br />
+                  New arrival items in every Mon-Saturday, be sure to check
+                  regularly. <br />
+                  <strong> How do I get a discount?</strong><br />
+                  If you are an existing member of
+                  <strong>ZANDO, TEN11, 361 Degree, ROUTINE and GATONI </strong>
+                  , you are free to register online to get the discount rate the
+                  same as offline stores just make sure to register the same
+                  telephone number. <br />
+                  <strong>What brand do we sell online?</strong><br />
+                  We are selling products from ZANDO, TEN11, 361 Degree, ROUTINE
+                  and GATONI. Some items you may find here but not at offline
+                  store
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                >
+                  Payment Methods
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  How do I pay? We provide multiple payment options Credit /
+                  Debit Card (Visa and Master Card) ABA Payway, Acleda Payway,
+                  Chipmong Bank Payway, ..... Bank Transfer (TT) COD (Cash on
+                  Delivery)
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Exchange & Returns
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  What are the exchange options? You aren't in Phnom Penh: You
+                  aren't in Phnom Penh: contact our customer service then choose
+                  a shipping courier near you. Please note that you will
+                  responsible for the shipping fee both way. You are Phnom Penh:
+                  Go to ZANDO App then "My Orders" Choose the order you want to
+                  exchange Choose items you want to exchange Once finished add
+                  new item to your shopping cart and then checkout. Remark: you
+                  can find your returned items in the shopping cart. Driver will
+                  deliver new item to you and collect returned item back. If my
+                  order eligible to be exchanged? Eligible to exchange in 14
+                  days after purchase date Item must be in their original
+                  condition, unworn, unaltered, and unwashed with all tags
+                  attached. For hygienic purposes, the following products are
+                  non-returnable: swimwear, lingerie, sock, towel, glove,
+                  blanket, mattress, earrings and other accessories
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Delivery
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  What is the delivery option?<br />
+                  In Phnom Penh, we provide home delivery To provinces, you can
+                  pick up your order at the courier office. How long does it
+                  take to receive my order? For Phnom Penh, We will deliver
+                  within 48 hours. For Provinces, We will deliver within 72
+                  hours. Please note that during peak seasonal sales our
+                  deliveries may be delayed. Should this be the case our team
+                  will contact you with further info. How much will shipping
+                  cost? 1$ delivery to 25 provinces and cities What shipping
+                  companies do we use? In Phnom Penh city, for short distance in
+                  the city center we use our own delivery man that is fast and
+                  convenient. To province, we cooperate with Virak Buntham and
+                  J&T. We also can deliver your order by another courier up on
+                  your request. overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Refund
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  What are the refund options? You aren't in Phnom Penh: contact
+                  our customer service then choose a shipping courier near you.
+                  You are Phnom Penh: Go to ZANDO App then "My Orders" Choose
+                  the order you want to refund Choose items Choose a refund
+                  method (Credit Card or Bank Transfer) Book refund Our team
+                  will review your returned items and process the refund. How
+                  long will refund take? After we receive returned items, It may
+                  take 2 weeks to process the refund. How do I check my return
+                  status? You may check return status in "My Returns" If my
+                  order eligible to be refunded? Eligible to return in 14 days
+                  after purchase date Returns must be in their original
+                  condition, unworn, unaltered, and unwashed with all tags
+                  attached. For hygienic purposes, the following products are
+                  non-returnable: swimwear, lingerie, sock, towel, glove,
+                  blanket, mattress, earrings and other accessories Items
+                  purchased on SALE cannot be refunded and are only eligible for
+                  exchange.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                >
+                  Refund
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">
+                  What is the delivery option?<br />
+                  In Phnom Penh, we provide home delivery To provinces, you can
+                  pick up your order at the courier office. How long does it
+                  take to receive my order? For Phnom Penh, We will deliver
+                  within 48 hours. For Provinces, We will deliver within 72
+                  hours. Please note that during peak seasonal sales our
+                  deliveries may be delayed. Should this be the case our team
+                  will contact you with further info. How much will shipping
+                  cost? 1$ delivery to 25 provinces and cities What shipping
+                  companies do we use? In Phnom Penh city, for short distance in
+                  the city center we use our own delivery man that is fast and
+                  convenient. To province, we cooperate with Virak Buntham and
+                  J&T. We also can deliver your order by another courier up on
+                  your request. overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-light text-center text-lg-start mt-5">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2015 - 2025
+        <a class="text-primary text-decoration-none" href="#">Zando.</a> All
+        rights reserved
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
