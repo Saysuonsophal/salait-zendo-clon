@@ -71,7 +71,7 @@
       border: none;
     }
     .add-cart {
-      width: 83%;
+      width: 41%;
 
       padding: 10px;
       font-size: 17px;
@@ -81,6 +81,12 @@
       background-color: #dfdfdf;
       font-size: 20px;
       padding: 8px;
+    }
+    .button-next {
+      background-color: rgba(0, 0, 0, 0.89);
+      width: 50px;
+      height: 50px;
+      margin: auto;
     }
 
     @media (max-width: 576px) {
@@ -184,18 +190,22 @@
             <img
               src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8972.jpg"
               class="img-thumbnail"
+              onclick="changeImage(this.src)"
             />
             <img
               src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8974.jpg"
               class="img-thumbnail"
+              onclick="changeImage(this.src)"
             />
             <img
               src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8971.jpg"
               class="img-thumbnail"
+              onclick="changeImage(this.src)"
             />
             <img
               src="https://zandokh.com/image/catalog/products/2025-11/11225081311/ZD__8966.jpg"
               class="img-thumbnail"
+              onclick="changeImage(this.src)"
             />
           </div>
         </div>
@@ -205,6 +215,7 @@
             <img
               src="https://zandokh.com/image/catalog/banner/2025/ZANDO/Category%20lifestyle,%20sportlife,%20smartcasual/Oct/Smart%20Casual-1.jpg"
               class="main-product"
+              id="main-image"
             />
           </div>
         </div>
@@ -223,57 +234,6 @@
             class="product-color"
           />
           <p class="card-text fw-lightd ms-3">Black</p>
-          <!-- <h3>Description</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, totam
-            expedita officiis iste autem vero quo! Accusantium totam laudantium
-            architecto quod suscipit possimus, repellat repellendus a officiis
-            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
-            provident necessitatibus animi, laboriosam cum. Nobis doloribus
-            libero molestias sapiente aut nisi fugit rerum eaque ullam
-            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
-            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
-            natus consequuntur, est sunt numquam voluptate suscipit non expedita
-            ex libero. Natus maiores cumque quaerat, vitae rerum velit
-            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
-            accusantium sunt tenetur delectus pariatur suscipit! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ab, totam expedita
-            officiis iste autem vero quo! Accusantium totam laudantium
-            architecto quod suscipit possimus, repellat repellendus a officiis
-            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
-            provident necessitatibus animi, laboriosam cum. Nobis doloribus
-            libero molestias sapiente aut nisi fugit rerum eaque ullam
-            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
-            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
-            natus consequuntur, est sunt numquam voluptate suscipit non expedita
-            ex libero. Natus maiores cumque quaerat, vitae rerum velit
-            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
-            accusantium sunt tenetur delectus pariatur suscipit! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ab, totam expedita
-            officiis iste autem vero quo! Accusantium totam laudantium
-            architecto quod suscipit possimus, repellat repellendus a officiis
-            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
-            provident necessitatibus animi, laboriosam cum. Nobis doloribus
-            libero molestias sapiente aut nisi fugit rerum eaque ullam
-            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
-            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
-            natus consequuntur, est sunt numquam voluptate suscipit non expedita
-            ex libero. Natus maiores cumque quaerat, vitae rerum velit
-            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
-            accusantium sunt tenetur delectus pariatur suscipit! Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Ab, totam expedita
-            officiis iste autem vero quo! Accusantium totam laudantium
-            architecto quod suscipit possimus, repellat repellendus a officiis
-            odio magni tenetur quibusdam dicta vitae exercitationem aliquam,
-            provident necessitatibus animi, laboriosam cum. Nobis doloribus
-            libero molestias sapiente aut nisi fugit rerum eaque ullam
-            voluptatum, distinctio doloremque quisquam voluptate a reprehenderit
-            eligendi est culpa in cumque quasi? Necessitatibus eveniet nulla
-            natus consequuntur, est sunt numquam voluptate suscipit non expedita
-            ex libero. Natus maiores cumque quaerat, vitae rerum velit
-            voluptates illo cupiditate harum, veritatis fuga quos omnis nemo
-            accusantium sunt tenetur delectus pariatur suscipit!
-          </p> -->
           <p class="card-text fs-5 fw-bold pt-2 m-0 pb-1">Size</p>
 
           <button type="button" class="btn btn-secondar button">S</button>
@@ -288,17 +248,29 @@
           <button type="button" class="btn btn-secondar button-minus">
             <i class="fa-solid fa-plus"></i>
           </button>
+          <div class="">
+            <button
+              type="button"
+              class="btn btn-dark mt-4 add-cart"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Buy Now
+            </button>
+            <button
+              type="button"
+              class="btn btn-dark mt-4 add-cart"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentModal"
+            >
+              Payment
+            </button>
+            <button type="button" class="btn btn-secondar mt-4 faverite">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+          </div>
 
-          <button
-            type="button"
-            class="btn btn-dark mt-4 add-cart"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Buy Now
-          </button>
-
-          <!-- Modal -->
+          <!-- Buy Now Modal -->
           <div
             class="modal fade"
             id="exampleModal"
@@ -509,9 +481,101 @@
             </div>
           </div>
 
-          <button type="button" class="btn btn-secondar mt-4 faverite">
-            <i class="fa-regular fa-heart"></i>
-          </button>
+          <!-- Payment Modal -->
+
+          <div
+            class="modal fade"
+            id="paymentModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Payment Option
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="col-12 d-flex flex-column row-gap-3 px-1">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault5"
+                      />
+                      <label class="form-check-label" for="radioDefault5">
+                        <img
+                          src="https://zandokh.com/image/catalog/logo/aba-payway/aba-pay-web.png"
+                          alt="ABA"
+                          style="width: 50%"
+                        />
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault6"
+                        checked
+                      />
+                      <label class="form-check-label" for="radioDefault6">
+                        <img
+                          src="https://zandokh.com/image/catalog/logo/aba-payway/V2/credit-debit-card.png"
+                          alt="Credit/Debit Card"
+                          style="width: 50%"
+                        />
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault7"
+                        checked
+                      />
+                      <label class="form-check-label" for="radioDefault7">
+                        <img
+                          src="https://zandokh.com/image/catalog/logo/acleda/xpay/xpay.png"
+                          alt="ACLEDA PAY"
+                          style="width: 50%"
+                        />
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="radioDefault"
+                        id="radioDefault8"
+                        checked
+                      />
+                      <label class="form-check-label" for="radioDefault8">
+                        <img
+                          src="https://zandokh.com/image/catalog/logo/chip-mong/chip-mong-bank.png"
+                          alt="CHIP MONG BANK"
+                          style="width: 50%"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Pay Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
             <div class="accordion-item">
@@ -727,7 +791,142 @@
         </div>
       </div>
     </div>
-
+    <!-- related product -->
+    <h2 class="d-flex justify-content-center mx-5 mt-4 mb-3">
+      Related product
+    </h2>
+    <div class="container">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%; margin-bottom: 20px">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-11/11225081315/ZD__7485-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">
+                      US $15.96
+                      <span
+                        class="text-body-tertiary text-decoration-line-through"
+                        >US $20.96</span
+                      >
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-11/11225101385/ZD__8982-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">US $17.59</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-10/11225091340/TAKK9884-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">
+                      US $21.96
+                      <span
+                        class="text-body-tertiary text-decoration-line-through"
+                        >US $28.96</span
+                      >
+                    </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-07/21225051284/ZANDO30.06.20250174-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">US $6.88</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%; margin-bottom: 20px">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-07/21225031116/ZANDO03.07.20251677-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">US $25.96</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-10/21225081381/SAL7313%20copy-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">US $19.96</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-10/2522506758%20Replace/Main-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">US $25.96</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                <div class="card" style="width: 100%">
+                  <img
+                    src="https://zandokh.com/image/cache/catalog/products/2025-10/2522506759%20Replace/1-cr-450x672.jpg"
+                    class="card-img-top h-75"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title text-danger">US $25.96</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev button-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next button-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
     <!-- footer -->
     <footer class="bg-light text-center text-lg-start mt-5">
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
@@ -741,5 +940,11 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // function parameter
+      function changeImage(newimage) {
+        document.getElementById("main-image").src = newimage;
+      }
+    </script>
   </body>
 </html>
